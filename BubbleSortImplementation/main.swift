@@ -18,12 +18,22 @@ func waitForUserInput() {
 var dataSet: [Int] = []
 
 // Create a variable that counts the number of swaps in a pass
-var numberOfSwaps = 0
+//var numberOfSwaps = 0
 
 // Populate the list
-for _ in 1...10 {
-    dataSet.append(Int.random(in: 1...100))
-}
+dataSet.append(10)
+dataSet.append(7)
+dataSet.append(52)
+dataSet.append(47)
+dataSet.append(5)
+dataSet.append(17)
+dataSet.append(87)
+dataSet.append(23)
+dataSet.append(34)
+dataSet.append(71)
+//for _ in 1...10 {
+//    dataSet.append(Int.random(in: 1...100))
+//}
 
 // Print the list
 print("Unsorted:")
@@ -34,7 +44,10 @@ waitForUserInput()
 // (however many times there are elements in the array)
 for i in 0..<dataSet.count {
     
-    numberOfSwaps = 0
+   //numberOfSwaps = 0
+    
+    // Keep track of whether a pair of numbers was swapped
+    var swapped = false
     
     // One pass through the array to float the highest number to the end
     for j in 0..<dataSet.count - 1 {
@@ -49,7 +62,10 @@ for i in 0..<dataSet.count {
             dataSet[j + 1] = temporaryValue // Replace right with the temporary value
             print(" values were swapped.", terminator: "")
             
-            numberOfSwaps = numberOfSwaps + 1
+            // Note that a swap occured
+            swapped = true
+            
+            //numberOfSwaps = numberOfSwaps + 1
             
         }
         print("")
@@ -59,13 +75,19 @@ for i in 0..<dataSet.count {
     // Print the array after the pass
     print("Array after pass \(i + 1):")
     print(dataSet)
+    waitForUserInput()
+
+    // When no swaps occurred, stop the outer loop
+    if swapped == false {
+        break
+    }
     
     // End the program if no more comparison occurs
-    if numberOfSwaps == 0 {
-        exit(0)
-    } else {
-        waitForUserInput()
-    }
+//    if numberOfSwaps == 0 {
+//        exit(0)
+//    } else {
+//        waitForUserInput()
+//    }
    
 
 }
