@@ -21,16 +21,16 @@ var dataSet: [Int] = []
 //var numberOfSwaps = 0
 
 // Populate the list
-dataSet.append(10)
-dataSet.append(7)
+dataSet.append(99)
+dataSet.append(97)
+dataSet.append(83)
+dataSet.append(80)
+dataSet.append(79)
+dataSet.append(73)
 dataSet.append(52)
-dataSet.append(47)
-dataSet.append(5)
-dataSet.append(17)
-dataSet.append(87)
 dataSet.append(23)
-dataSet.append(34)
-dataSet.append(71)
+dataSet.append(17)
+dataSet.append(8)
 //for _ in 1...10 {
 //    dataSet.append(Int.random(in: 1...100))
 //}
